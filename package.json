@@ -1,0 +1,30 @@
+{
+  "name": "js-k6",
+  "version": "1.0.0",
+  "description": "Learn k6 &amp; js quickly",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "k6": "k6 run --compatibility-mode=base --out json=output.json script.js",
+    "k6:local": "k6 run --compatibility-mode=base --out json=output.json script.js --local",
+    "k6:cloud": "k6 cloud --compatibility-mode=base --out json=output.json script.js",
+    "k6:vus": "k6 run --vus 5 --duration 15s ./k6-doc-examples/my-first-k6-test.js",
+    "k6:duration": "k6 run --duration 20s ./k6-doc-examples/my-first-k6-test.js",
+    "k6:summary": "k6 run --summary-export=summary.json ./k6-doc-examples/ramp-vus-in-stages.js",
+    "k6:options": "k6 run ./k6-doc-examples/set-options-k6-test.js",
+    "k6:trends": "k6 run --iterations=20 --vus=10 --summary-trend-stats=\"med,p(95),p(99.9)\" ./k6-doc-examples/my-first-k6-test.js",
+    "k6:browser": "$env:K6_BROWSER_HEADLESS=\"false\"",
+    "k6:browser:run": "set \"K6_BROWSER_HEADLESS=false\" && k6 run ./k6-doc-examples/13page-waitForTimeout.js",
+    "k6:browser:runhl": "set \"K6_BROWSER_HEADLESS=false\" && k6 run ./k6-doc-examples/homepage-test.js",
+    "k6:browser:hl": "$env:K6_BROWSER_HEADLESS=\"true\"",
+    "k6:browser:headless": "k6:browser:hl && k6 run ./k6-doc-examples/simple-browser-test.js",
+    "k6:web:dashboard": "set \"K6_WEB_DASHBOARD=true\" && k6 run ./k6-doc-examples/4ramp-vus-in-stages.js",
+    "k6:web:dashboard:export": "set \"K6_WEB_DASHBOARD=true\" && set \"K6_WEB_DASHBOARD_EXPORT=html-report.html\" && k6 run ./k6-doc-examples/4ramp-vus-in-stages.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/k6": "1.0.2"
+  }
+}

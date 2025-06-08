@@ -1,6 +1,15 @@
 # Created by https://www.toptal.com/developers/gitignore/api/node,jmeter,sonar,sonarqube,windows,git,cypressio,intellij,visualstudiocode
 # Edit at https://www.toptal.com/developers/gitignore?templates=node,jmeter,sonar,sonarqube,windows,git,cypressio,intellij,visualstudiocode
 
+### misc ###
+# Miscellaneous files that should be ignored
+*.tmp
+*.temp
+*.bak
+**/screenshots/**
+*summary.json
+*html-report.html
+
 ### CypressIO ###
 # gitignore template for the CypressIO, browser test framework
 # website: https://www.cypress.io/
