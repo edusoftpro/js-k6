@@ -19,7 +19,8 @@
     "k6:browser:hl": "$env:K6_BROWSER_HEADLESS=\"true\"",
     "k6:browser:headless": "k6:browser:hl && k6 run ./k6-doc-examples/simple-browser-test.js",
     "k6:web:dashboard": "set \"K6_WEB_DASHBOARD=true\" && k6 run ./k6-doc-examples/4ramp-vus-in-stages.js",
-    "k6:web:dashboard:export": "set \"K6_WEB_DASHBOARD=true\" && set \"K6_WEB_DASHBOARD_EXPORT=html-report.html\" && k6 run ./k6-doc-examples/4ramp-vus-in-stages.js"
+    "k6:web:dashboard:export": "set \"K6_WEB_DASHBOARD=true\" && set \"K6_WEB_DASHBOARD_EXPORT=html-report.html\" && k6 run ./k6-doc-examples/4ramp-vus-in-stages.js",
+    "k6:sharred:array": "set N=3000000 && k6 run ./k6-apijs-examples/08data/x-shared-array.js"
   },
   "keywords": [],
   "author": "",
