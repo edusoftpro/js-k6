@@ -4,6 +4,8 @@
   "description": "Learn k6 &amp; js quickly",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint ./k6-apijs-examples ./k6-doc-examples ./k6-examples",
+    "lint:fix": "eslint ./k6-apijs-examples ./k6-doc-examples ./k6-examples --fix",
     "test": "echo \"Error: no test specified\" && exit 1",
     "k6": "k6 run --compatibility-mode=base --out json=output.json script.js",
     "k6:local": "k6 run --compatibility-mode=base --out json=output.json script.js --local",
@@ -20,12 +22,16 @@
     "k6:browser:headless": "k6:browser:hl && k6 run ./k6-doc-examples/simple-browser-test.js",
     "k6:web:dashboard": "set \"K6_WEB_DASHBOARD=true\" && k6 run ./k6-doc-examples/4ramp-vus-in-stages.js",
     "k6:web:dashboard:export": "set \"K6_WEB_DASHBOARD=true\" && set \"K6_WEB_DASHBOARD_EXPORT=html-report.html\" && k6 run ./k6-doc-examples/4ramp-vus-in-stages.js",
-    "k6:sharred:array": "set N=3000000 && k6 run ./k6-apijs-examples/08data/x-shared-array.js"
+    "k6:sharred:array": "set N=3000000 && k6 run ./k6-apijs-examples/08data/x-shared-array.js",
+    "k6:options:json": "k6 run --config ./k6-examples/05options/options.json ./k6-examples/05options/script.js",
+    "k6:tags": "k6 run --out json=test_results.json ./k6-examples/08tags/check-tag.js",
+    "k6:env": "k6 run --env MY_HOSTNAME=test.k6.io ./k6-examples/11environment-variables/passing-env.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/k6": "1.0.2"
+    "@types/k6": "1.0.2",
+    "eslint": "8.0.0"
   }
 }

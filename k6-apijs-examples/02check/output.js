@@ -9,7 +9,7 @@ export default function () {
       'response code was 200': (res) => res.status == 200,
       'body size was larger than 123 bytes': (res) => res.body.length > 123,
     },
-    { myTag: "I'm a tag" }
+    { myTag: 'I\'m a tag' }
   );
 
   if (!checkOutput) {
