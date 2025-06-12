@@ -4,9 +4,9 @@
   "description": "Learn k6 &amp; js quickly",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint ./examples",
+    "lint": "eslint ./examples ./tasks",
     "lints": "eslint ./k6-apijs-examples ./k6-doc-examples ./k6-examples",
-    "lint:fix": "eslint ./examples --fix",
+    "lint:fix": "eslint ./examples ./tasks --fix",
     "lints:fix": "eslint ./k6-apijs-examples ./k6-doc-examples ./k6-examples --fix",
     "test": "echo \"Error: no test specified\" && exit 1",
     "k6": "k6 run --compatibility-mode=base --out json=output.json script.js",
