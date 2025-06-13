@@ -1,0 +1,4 @@
+# build artefacts
+coverage/*
+# custom definition files
+**/z-local-cookie-jars-examples.js

@@ -1,5 +1,5 @@
-import http from "k6/http";
-import { group, sleep } from "k6";
+import http from 'k6/http';
+import { group, sleep } from 'k6';
 
 export const options = {
   vus: 2,
@@ -7,18 +7,18 @@ export const options = {
 };
 
 export default function () {
-  group("Public Homepage", function () {
-    http.get("https://test.k6.io");
+  group('Public Homepage', function () {
+    http.get('https://test.k6.io');
     sleep(1);
   });
 
-  group("News Section", function () {
-    http.get("https://test.k6.io/news.php");
+  group('News Section', function () {
+    http.get('https://test.k6.io/news.php');
     sleep(1);
   });
 
-  group("Contact Page", function () {
-    http.get("https://test.k6.io/contact.php");
+  group('Contact Page', function () {
+    http.get('https://test.k6.io/contact.php');
     sleep(1);
   });
 }
