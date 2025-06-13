@@ -8,7 +8,7 @@ export const options = {
   duration: '10s',
 };
 
-// init context: global variables
+// eslint-disable-next-line no-unused-vars
 const customTrend = new Trend('oneCustomMetric');
 
 export function setup() {

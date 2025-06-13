@@ -25,6 +25,7 @@ export default function () {
   }
 
   // Method 2: Use ES6 Map to loop over Object entries
+  // eslint-disable-next-line no-unused-vars
   new Map(Object.entries(res.cookies)).forEach((v, k) => {
     logCookie(v[0]);
   });
